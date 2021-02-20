@@ -12,6 +12,7 @@ enum layers {
 #define SYM_TAB LT(_SYM, KC_TAB)
 #define SYM_SPC LT(_SYM, KC_SPC)
 #define NAV_SPC LT(_NAV, KC_SPC)
+#define NAV_TAB LT(_NAV, KC_TAB)
 #define NUM_BSP LT(_NUM, KC_BSPC)
 
 #define LGUI_A  MT(MOD_LGUI, KC_A)
@@ -54,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       X, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    X,
       X, LGUI_A,  LALT_S,  LCTL_D,  LSFT_F,  KC_G,               KC_H,    RSFT_J,  RCTL_K,  RALT_L,  RGUI_SC, X,
       X, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, X, X,   X, X, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, X,
-             KC_LALT, KC_LSFT, NUM_ESC, SYM_TAB, NAV_ENT,  NAV_SPC, SYM_SPC, NUM_BSP, KC_DEL,  KC_RALT
+             KC_LALT, KC_LSFT, NUM_ESC, SYM_SPC, NAV_ENT,  NAV_TAB, SYM_SPC, NUM_BSP, KC_DEL,  KC_RALT
     ),
     [_NUM] = LAYOUT(
       X, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10,              KC_0,    KC_7,    KC_8,    KC_9,    KC_PSCR, X,

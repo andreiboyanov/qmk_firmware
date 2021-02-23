@@ -50,9 +50,13 @@ enum layers {
 #define _ KC_TRANSPARENT
 #define X KC_NO
 
+enum custom_keycodes {
+    SCRATCHPAD = SAFE_RANGE,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
-      X, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    X,
+      X, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    SCRATCHPAD,
       X, LGUI_A,  LALT_S,  LCTL_D,  LSFT_F,  KC_G,               KC_H,    RSFT_J,  RCTL_K,  RALT_L,  RGUI_SC, X,
       X, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, X, X,   X, X, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, X,
              KC_TAB, KC_DEL, NUM_ESC, SYM_SPC, NAV_ENT,  NAV_TAB, SYM_SPC, NUM_BSP, KC_DEL,  KC_RALT
@@ -76,6 +80,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______
     ),
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SCRATCHPAD:
+        if (record->event.pressed) {
+            SEND_STRING(SS_LGUI("-"));
+        }
+        break;
+    }
+    return true;
+}
 
 // layer_state_t layer_state_set_user(layer_state_t state) {
     // return update_tri_layer_state(state, _NUM, _SYM, _NAV);

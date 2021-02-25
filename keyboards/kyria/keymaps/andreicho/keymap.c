@@ -56,27 +56,27 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
-      X, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    SCRATCHPAD,
-      X, LGUI_A,  LALT_S,  LCTL_D,  LSFT_F,  KC_G,               KC_H,    RSFT_J,  RCTL_K,  RALT_L,  RGUI_SC, X,
-      X, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, X, X,   X, X, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, X,
+      _, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,               KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    SCRATCHPAD,
+      _, LGUI_A,  LALT_S,  LCTL_D,  LSFT_F,  KC_G,               KC_H,    RSFT_J,  RCTL_K,  RALT_L,  RGUI_SC, _,
+      KC_SPC, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, X, X,   X, X, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, _,
              KC_TAB, KC_DEL, NUM_ESC, SYM_SPC, NAV_ENT,  NAV_TAB, SYM_SPC, NUM_BSP, KC_DEL,  KC_RALT
     ),
     [_NUM] = LAYOUT(
-      X, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10,              KC_0,    KC_7,    KC_8,    KC_9,    KC_PSCR, X,
-      X, KC_LGUI, LALT_F4, LCTL_F5, LSFT_F6, KC_F11,              KC_0,    RSFT_4,  RCTL_5,  RALT_6,  RGUI_IN, X,
-      X, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F12, X, X,  X, X, KC_0,    KC_1,    KC_2,    KC_3,    KC_DEL,  X,
+      _, XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10,              KC_0,    KC_7,    KC_8,    KC_9,    KC_PSCR, _,
+      _, KC_LGUI, LALT_F4, LCTL_F5, LSFT_F6, KC_F11,              KC_0,    RSFT_4,  RCTL_5,  RALT_6,  RGUI_IN, _,
+      _, XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F12, X, X,  X, X, KC_0,    KC_1,    KC_2,    KC_3,    KC_DEL,  _,
               _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______
     ),
     [_SYM] = LAYOUT(
-      X, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, KC_COLN,              KC_DQUO,    KC_LPRN, KC_RPRN, KC_EQL,  KC_ASTR, X,
-      X, KC_LGUI, KC_DLR,  KC_PERC, KC_CIRC, KC_TILD,              KC_QUOT,    RSFT_LB, RCTL_RB, RALT_MI, RGUI_PL, X,
-      X, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_QUES, X, X,  X, X, KC_GRV,     KC_LCBR, KC_RCBR, KC_UNDS, KC_BSLS, X,
+      _, XXXXXXX, KC_AMPR, KC_ASTR, KC_PIPE, KC_COLN,              KC_DQUO,    KC_LPRN, KC_RPRN, KC_EQL,  KC_ASTR, _,
+      _, KC_LGUI, KC_DLR,  KC_PERC, KC_CIRC, KC_TILD,              KC_QUOT,    RSFT_LB, RCTL_RB, RALT_MI, RGUI_PL, _,
+      _, XXXXXXX, KC_EXLM, KC_AT,   KC_HASH, KC_QUES, X, X,  X, X, KC_GRV,     KC_LCBR, KC_RCBR, KC_UNDS, KC_BSLS, _,
                _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______
     ),
     [_NAV] = LAYOUT(
-      X, _______, _______, _______, _______, _______,              KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_PSCR, X,
-      X, _______, _______, _______, _______, _______,              KC_PGDN, RSFT_LF, RCTL_DN, RALT_RG, RGUI_IN, X,
-      X, _______, _______, _______, _______, _______, X, X,  X, X, KC_QUES, KC_LT,   KC_GT,   KC_COLN, KC_DEL,  X,
+      _, _______, _______, _______, _______, _______,              KC_PGUP, KC_HOME, KC_UP,   KC_END,  KC_PSCR, _,
+      _, _______, _______, _______, _______, _______,              KC_PGDN, RSFT_LF, RCTL_DN, RALT_RG, RGUI_IN, _,
+      _, _______, _______, _______, _______, _______, X, X,  X, X, KC_QUES, KC_LT,   KC_GT,   KC_COLN, KC_DEL,  _,
                _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______
     ),
 };

@@ -1,4 +1,5 @@
-#include QMK_KEYBOARD_H
+#include "kyria.h"
+#include "kyria/rev1/config.h"
 
 enum layers {
     _QWERTY = 0,
